@@ -2879,8 +2879,8 @@ const CheckboxComp = () => {
   console.log(uniqueActions, "RRRRRR");
 
   const mappedData = Object.keys(datas.data).map((moduleKey) => {
-    const moduleData = datas[moduleKey];
-   console.log(moduleData, "moduleData")
+    const moduleData = datas.data[moduleKey];
+    console.log(moduleData, "moduleData");
     return {
       module: moduleData,
     };
@@ -2888,7 +2888,7 @@ const CheckboxComp = () => {
   return (
     <>
       <div className="container mt-5 mb-3">
-         {mappedData.module}
+        {mappedData.module}
         <input
           type="checkbox"
           checked={isAllChecked}
