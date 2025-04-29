@@ -2877,10 +2877,18 @@ const CheckboxComp = () => {
     )
   );
   console.log(uniqueActions, "RRRRRR");
+
+  const mappedData = Object.keys(datas.data).map((moduleKey) => {
+    const moduleData = datas[moduleKey];
+   console.log(moduleData, "moduleData")
+    return {
+      module: moduleData,
+    };
+  });
   return (
     <>
       <div className="container mt-5 mb-3">
-        Accounts
+         {mappedData.module}
         <input
           type="checkbox"
           checked={isAllChecked}
